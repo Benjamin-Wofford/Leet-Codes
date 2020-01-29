@@ -15,10 +15,11 @@ const sumreturnIndices = (array, targetSum) => {
 
   for (let i = 0; i < array.length; i++) {
     let numberFromArray = array[i];
-    let complement = targetSum - numberFromArray;
+    let complement = targetSum - numberFromArray; // A complement is the other you would use to reach a sum
 
-    if (numberIndex.has(complement)) {
-      result[0] = numberIndex.get(complement);
+    
+    if (numberIndex.has(complement)) { // has method on a map checks whether the map has that variable as a key
+      result[0] = numberIndex.get(complement); // gets the value of the element at that key (complement)
       result[1] = i;
 
       return console.log(result);
